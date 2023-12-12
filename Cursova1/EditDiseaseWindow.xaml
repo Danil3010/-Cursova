@@ -1,0 +1,21 @@
+<Window x:Class="Cursova1.EditDiseaseWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     Title="Edit disease" Height="287" Width="400">
+	<Grid Margin="0,0,0,-6">
+		<TextBlock Text="Name:" Margin="24,29,-4,0" VerticalAlignment="Top" />
+		<TextBox Text="{Binding Name, Mode=TwoWay}" Margin="104,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
+
+		<TextBlock Text="Symptoms:" Margin="24,61,311,0" VerticalAlignment="Top" />
+		<TextBox Text="{Binding Symptoms, Mode=TwoWay}" Margin="104,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
+
+		<TextBlock Text="Procedures:" Margin="24,98,308,0" VerticalAlignment="Top" />
+		<TextBox Text="{Binding Procedures, Mode=TwoWay}" Margin="104,99,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
+
+		<TextBlock Text="Medicine:" Margin="24,133,311,0" VerticalAlignment="Top" />
+		<TextBox Text="{Binding Medicines, Mode=TwoWay}" Margin="104,132,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" RenderTransformOrigin="0.505,1.466" />
+
+		<Button Content="OK" IsDefault="True" Margin="67,201,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="30" Click="OK_Click"/>
+		<Button Content="Cansel" IsCancel="True" Margin="0,201,67,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Height="30" Click="Cancel_Click"/>
+	</Grid>
+</Window>

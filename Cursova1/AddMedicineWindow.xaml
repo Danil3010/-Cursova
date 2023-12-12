@@ -1,0 +1,25 @@
+<Window x:Class="Cursova1.AddMedicineWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Add medications" Height="274" Width="355">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Name:" Margin="10,23,10,0" VerticalAlignment="Top" Grid.Row="3" />
+        <TextBox Text="{Binding Name, Mode=TwoWay}" Margin="120,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Grid.Row="3"/>
+
+        <TextBlock Text="Number:" Margin="10,79,10,0" VerticalAlignment="Top" Grid.Row="3" />
+        <TextBox Text="{Binding Quantity, Mode=TwoWay}" Margin="120,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Grid.Row="3"/>
+
+        <TextBlock Text="Interchangeability:" Margin="10,135,10,0" VerticalAlignment="Top" Grid.Row="3" />
+        <TextBox Text="{Binding Interchangeable, Mode=TwoWay}" Margin="120,135,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Grid.Row="3"/>
+
+        <Button Content="OK" IsDefault="True" Margin="88,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="30" Grid.Row="3" Click="OK_Click"/>
+        <Button Content="Cansel" IsCancel="True" Margin="214,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Height="30" Grid.Row="3" Click="Cancel_Click"/>
+    </Grid>
+</Window>
+

@@ -1,0 +1,52 @@
+﻿<Window x:Class="Cursova1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Довідник лікаря" Height="350" Width="974">
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\danil\OneDrive\Рабочий стол\ava.png"/>
+    </Window.Icon>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Content="Сортувати хвороби" Click="SortDiseases_Click"/>
+            <Button Content="Сортувати медикаменти" Click="SortMedicines_Click"/>
+            <Button Content="Додати хворобу" Click="AddDisease_Click"/>
+            <Button Content="Додати медикамент" Click="AddMedicine_Click"/>
+            <Button Content="Видалити хворобу" Click="DeleteDisease_Click"/>
+            <Button Content="Видалити медикамент" Click="DeleteMedicine_Click"/>
+            <Button Content="Редагувати хворобу" Click="EditDisease_Click"/>
+            <Button Content="Редагувати медикамент" Click="EditMedicine_Click"/>
+        </StackPanel>
+        <TabControl Grid.Row="1">
+            <!-- Вкладка "Хвороби" -->
+            <TabItem Header="Хвороби">
+                <ListView Name="diseasesListView">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding Name}" />
+                            <GridViewColumn Header="Симптоми" DisplayMemberBinding="{Binding Symptoms}" />
+                            <GridViewColumn Header="Процедури" DisplayMemberBinding="{Binding Procedures}" />
+                            <GridViewColumn Header="Ліки" DisplayMemberBinding="{Binding Medicines}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+
+            <!-- Вкладка "Медикаменти" -->
+            <TabItem Header="Медикаменти">
+                <ListView Name="medicinesListView">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding Name}" />
+                            <GridViewColumn Header="Кількість" DisplayMemberBinding="{Binding Quantity}" />
+                            <GridViewColumn Header="Взаємозамінність" DisplayMemberBinding="{Binding Interchangeable}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
